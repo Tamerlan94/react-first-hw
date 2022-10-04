@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Home from "./components/Home";
 import Parent from "./components/Parent";
 import Child from "./components/child";
+import Sum from "./components/Sum";
 
 function App() {
   const [text, setText] = useState('default');
@@ -27,9 +28,11 @@ function App() {
         <Link to="/parent/child">child </Link>
         <Link to="/productClass">class </Link>
         <Link to="/productFunction">function </Link>
+        <Link to="/sum">sum </Link>
         <div>
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/sum" element={<Sum />}></Route>
             <Route path="/parent" element={<Parent />}>
               <Route path="child" element={<Child />}></Route>
             </Route>
